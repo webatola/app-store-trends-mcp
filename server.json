@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.webatola/app-store-trends",
+  "title": "App Store & Google Trends",
+  "description": "App Store top charts, keyword search and rank, app details, and Google Trends trending searches.",
+  "version": "0.1.0",
+  "websiteUrl": "https://apify.com/webatola/app-store-trends-mcp-server",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://webatola--app-store-trends-mcp-server.apify.actor/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer followed by your Apify API token (console.apify.com/settings/integrations). Calls are billed to your Apify account.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    },
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com/?tools=webatola/app-store-trends-mcp-server"
+    }
+  ]
+}
